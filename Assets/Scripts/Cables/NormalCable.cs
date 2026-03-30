@@ -10,7 +10,18 @@ public class NormalCable : MonoBehaviour, ICableConnectable
     //コード自身の通電状態の表示に使う黄色い子オブジェクトをアタッチ
     [SerializeField] 
     private GameObject powerStatus;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private void OnEnable() 
+    {
+        CableEventManager.OnInitializePowerStatus += InitializePower;
+        CableEventManager.OnResetPowerStatus += ResetPowerStatus;
+    }
+    private void OnDisable() 
+    {
+        CableEventManager.OnInitializePowerStatus -= InitializePower;
+        CableEventManager.OnResetPowerStatus -= ResetPowerStatus;
+
+    }
     void Start()
     {
         powerStatus.SetActive(false);
@@ -24,5 +35,13 @@ public class NormalCable : MonoBehaviour, ICableConnectable
         {
             targetCable.CheckConnections(currentPower - powerLossAmount);
         }
+    }
+    public void InitializePower()
+    {
+        powerStatus.SetActive(false);
+    }
+    public void ResetPowerStatus()
+    {
+        powerStatus.SetActive(false);
     }
 }

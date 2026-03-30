@@ -69,7 +69,11 @@ public class CableDrag : MonoBehaviour
 
     private void TrySnap()
     {
-        if (nearbyAreas.Count == 0) return;
+        if (nearbyAreas.Count == 0)
+        {
+            CableEventManager.TriggerUpdatePowerStatus();
+            return;
+        }
 
         Vector3 currentPos = transform.localPosition;
         Vector3 snapPosition = nearbyAreas[0].GetAreaCenterPosition();
@@ -87,6 +91,8 @@ public class CableDrag : MonoBehaviour
             }
         }
         transform.localPosition = snapPosition;
+
+        CableEventManager.TriggerUpdatePowerStatus();
 
     }
 }

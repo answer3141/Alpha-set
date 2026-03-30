@@ -5,4 +5,6 @@ using System.Collections.Generic;
 public interface ICableConnectable
 {
     void ConnectCable(List<ConnectionCheckArea> targetCableList, float currentPower);
+    void InitializePower();
+    void ResetPowerStatus();
 }
