@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 7436318192813693171}
   - component: {fileID: 62242300875348246}
   m_Layer: 0
-  m_Name: Pivot
+  m_Name: GridAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
