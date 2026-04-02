@@ -9,12 +9,26 @@ public class ConnectionCheckArea : MonoBehaviour
     [SerializeField, Header("現在繋がっているエリア")]
     private List<ConnectionCheckArea> currentConnectedCableList = new List<ConnectionCheckArea>();
     private ICableConnectable parentConnectable;
+    private Collider2D myCollider;
+    private ContactFilter2D contactFilter;
     private void Awake()
     {
+        myCollider = GetComponent<Collider2D>();
+        contactFilter = new ContactFilter2D();
+        contactFilter.useTriggers = true;
+
         if (!transform.parent.TryGetComponent(out parentConnectable ))
         {
             Debug.LogError($"{transform.parent.name}にICableConnectableを実装したコンポーネントが必要です。");
         }
+    }
+
+    private void OnEnable() 
+    {
+        CableEventManager.OnResetPowerStatus += UpdateColliderStatus;
+    }
+    private void OnDisable() {
+        CableEventManager.OnResetPowerStatus -= UpdateColliderStatus;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -44,6 +58,26 @@ public class ConnectionCheckArea : MonoBehaviour
         foreach (ConnectionCheckArea connectedCable in currentConnectedCableList)
         {
             connectedCable.Connected(newPower);
+        }
+    }
+
+// ドラッグ後はOnTriggerEnter2DやOnTriggerExit2Dが呼び出される前に処理したいので、OverlapColliderで強制的に接触状態を更新
+    public void UpdateColliderStatus()
+    {
+        currentConnectedCableList.Clear();
+
+        Physics2D.SyncTransforms();
+        List<Collider2D> results = new List<Collider2D>();
+        int colliderCount = Physics2D.OverlapCollider(myCollider, contactFilter, results);
+
+        if (colliderCount <= 0) return;
+
+        foreach (var collider in results)
+        {
+            if (collider.gameObject.TryGetComponent(out ConnectionCheckArea connectionCheckArea))
+            {
+                currentConnectedCableList.Add(connectionCheckArea);
+            }
         }
     }
 
