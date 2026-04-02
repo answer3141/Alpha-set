@@ -6,4 +6,6 @@ using UnityEngine;
 public interface IAlphabetArea
 {
     Vector3 GetAreaCenterPosition();
+    
+    bool IsOccupied { get; set; }
 }

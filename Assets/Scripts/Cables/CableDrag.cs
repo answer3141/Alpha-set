@@ -6,6 +6,8 @@ public class CableDrag : MonoBehaviour
     private Camera mainCam;
     private bool isDragging = false;
 
+    private IAlphabetArea currentArea = null;
+
     // 一度に複数のエリアに入る可能性があるため、リストで管理
     private List<IAlphabetArea> nearbyAreas = new List<IAlphabetArea>();
 
@@ -35,6 +37,12 @@ public class CableDrag : MonoBehaviour
             {
                 isDragging = true;
                 offset = transform.position - worldPos;
+
+                    if (currentArea != null)
+                    {
+                        currentArea.IsOccupied = false;
+                        currentArea = null;
+                    }
             }
         }
 
@@ -69,30 +77,29 @@ public class CableDrag : MonoBehaviour
 
     private void TrySnap()
     {
-        if (nearbyAreas.Count == 0)
-        {
-            CableEventManager.TriggerUpdatePowerStatus();
-            return;
-        }
+         IAlphabetArea bestArea = null;
+        float minDiff = float.MaxValue;
 
-        Vector3 currentPos = transform.localPosition;
-        Vector3 snapPosition = nearbyAreas[0].GetAreaCenterPosition();
-        // 距離の大小を比べたいだけなので、Distanceではなくルート処理がないSqrMagnitude(距離の二乗)で比較
-        float currentDiff = Vector3.SqrMagnitude(currentPos - snapPosition);
-
-        // 複数のエリアがある場合は、最も近いエリアにスナップさせる
         foreach (var area in nearbyAreas)
         {
-            float newDiff = Vector3.SqrMagnitude(currentPos - area.GetAreaCenterPosition());
-            if (newDiff < currentDiff)
+            if (area.IsOccupied) continue;
+
+            float diff = Vector3.SqrMagnitude(transform.localPosition - area.GetAreaCenterPosition());
+            if (diff < minDiff)
             {
-                snapPosition = area.GetAreaCenterPosition();
-                currentDiff = newDiff;
+                minDiff = diff;
+                bestArea = area;
             }
         }
-        transform.localPosition = snapPosition;
 
+        if (bestArea != null)
+        {
+            transform.localPosition = bestArea.GetAreaCenterPosition();
+            bestArea.IsOccupied = true; 
+            currentArea = bestArea;
+        }
+    
         CableEventManager.TriggerUpdatePowerStatus();
-
     }
+
 }
