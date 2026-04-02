@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5382755384862828736}
   - component: {fileID: -5891654931531608150}
   - component: {fileID: 1516378613290850337}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SampleCable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,6 +124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32c404a685f7944694bc142f869b76f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CableDrag
+  isDragging: 0
+  AlphabetLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1001 &23548558190537527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -172,9 +176,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 3147869506730917461, guid: 8ba766c96dce046469897959511ad061, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840353397310855667, guid: 8ba766c96dce046469897959511ad061, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Name
       value: AlphabetConnectionParts (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226836322817199178, guid: 8ba766c96dce046469897959511ad061, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -234,9 +254,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3147869506730917461, guid: 8ba766c96dce046469897959511ad061, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840353397310855667, guid: 8ba766c96dce046469897959511ad061, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Name
       value: AlphabetConnectionParts
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226836322817199178, guid: 8ba766c96dce046469897959511ad061, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -296,9 +332,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2917493373899688273, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379307034232117696, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840353397310855667, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6887136898052064078, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
       propertyPath: m_Name
       value: StraightCable (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462788765929113260, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226836322817199178, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -358,9 +418,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2917493373899688273, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379307034232117696, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840353397310855667, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6887136898052064078, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
       propertyPath: m_Name
       value: StraightCable
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462788765929113260, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226836322817199178, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -420,9 +504,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2917493373899688273, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379307034232117696, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840353397310855667, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6887136898052064078, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
       propertyPath: m_Name
       value: StraightCable (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462788765929113260, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226836322817199178, guid: 6110023ab635fb146ab052ab54f84223, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

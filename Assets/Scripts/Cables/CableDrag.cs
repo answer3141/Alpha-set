@@ -4,9 +4,13 @@ public class CableDrag : MonoBehaviour
 {
     private Vector3 offset;
     private Camera mainCam;
+    [SerializeField]
     private bool isDragging = false;
 
+    [SerializeField]    
     private IAlphabetArea currentArea = null;
+    [SerializeField]
+    private LayerMask AlphabetLayerMask;
 
     // 一度に複数のエリアに入る可能性があるため、リストで管理
     private List<IAlphabetArea> nearbyAreas = new List<IAlphabetArea>();
@@ -32,7 +36,8 @@ public class CableDrag : MonoBehaviour
             );
             Vector3 worldPos = mainCam.ScreenToWorldPoint(screenPos);
 
-            RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);
+            RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero, Mathf.Infinity, AlphabetLayerMask);
+
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
                 isDragging = true;
@@ -77,7 +82,7 @@ public class CableDrag : MonoBehaviour
 
     private void TrySnap()
     {
-         IAlphabetArea bestArea = null;
+        IAlphabetArea bestArea = null;
         float minDiff = float.MaxValue;
 
         foreach (var area in nearbyAreas)
