@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class NormalCable : MonoBehaviour, ICableConnectable
 {
-    // このケーブルを通るときの電力損失量
+    // このケーブルを通るときの電力損失量。ただし、増幅装置の場合はマイナスで対応。
     [SerializeField]
     private int powerLossAmount = 1;
     
