@@ -26,8 +26,8 @@ public class ResetPosition : MonoBehaviour
                 rotation = obj.transform.rotation.eulerAngles.z
                 }); 
             }
-           
-           
+        
+        
         }
     }
 
@@ -44,6 +44,7 @@ public class ResetPosition : MonoBehaviour
                     targetObjects[i].transform.rotation = Quaternion.Euler(0, 0, originalData[i].rotation);
                 }
             }
+            CableEventManager.TriggerUpdatePowerStatus();
         }
         
     }
