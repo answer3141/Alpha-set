@@ -5,11 +5,13 @@ public class NormalCable : MonoBehaviour, ICableConnectable
 {
     // このケーブルを通るときの電力損失量。ただし、増幅装置の場合はマイナスで対応。
     [SerializeField]
-    private int powerLossAmount = 1;
+    private float powerLossAmount = 1f;
     
     //コード自身の通電状態の表示に使う黄色い子オブジェクトをアタッチ
     [SerializeField] 
     private GameObject powerStatus;
+    [SerializeField]
+    private float currentPower = 0f;
 
     private void OnEnable() 
     {
@@ -27,10 +29,12 @@ public class NormalCable : MonoBehaviour, ICableConnectable
         powerStatus.SetActive(false);
     }
 
-    public void ConnectCable(List<ConnectionCheckArea> targetCableList, float currentPower)
+    public void ConnectCable(List<ConnectionCheckArea> targetCableList, float previousPower)
     {
-        if (currentPower <= 0) return;
+        if (previousPower <= 0 || previousPower < powerLossAmount) return;
         powerStatus.SetActive(true);
+
+        currentPower = previousPower;
         foreach (ConnectionCheckArea targetCable in targetCableList)
         {
             targetCable.CheckConnections(currentPower - powerLossAmount);

@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 5096510041276469500}
   - component: {fileID: 4809904190862459392}
   m_Layer: 0
-  m_Name: CurveCable 1
+  m_Name: CurveCable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
