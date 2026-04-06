@@ -10,6 +10,7 @@ public class AlphabetCable : MonoBehaviour, ICableConnectable
     //コード自身の通電状態の表示に使う黄色い子オブジェクトをアタッチ
     [SerializeField] 
     private GameObject powerStatus;
+    private CableDrag cableDrag;
 
     private void OnEnable() 
     {
@@ -25,11 +26,21 @@ public class AlphabetCable : MonoBehaviour, ICableConnectable
     void Start()
     {
         powerStatus.SetActive(false);
+        if (TryGetComponent(out CableDrag drag))
+        {
+            cableDrag = drag;
+        }
+        else
+        {
+            Debug.LogError($"CableDrag が {gameObject.name} に見つかりません");
+        }
     }
 
     public void ConnectCable(List<ConnectionCheckArea> targetCableList, float currentPower)
     {
         if (currentPower <= 0) return;
+        // 未設置の際には通電させない
+        if (cableDrag.CurrentArea == null) return;
         powerStatus.SetActive(true);
         foreach (ConnectionCheckArea targetCable in targetCableList)
         {

@@ -6,9 +6,7 @@ public class CableDrag : MonoBehaviour
     private Camera mainCam;
     [SerializeField]
     private bool isDragging = false;
-
-    [SerializeField]    
-    private IAlphabetArea currentArea = null;
+    public IAlphabetArea CurrentArea { get; private set; } = null;
     [SerializeField]
     private LayerMask AlphabetLayerMask;
 
@@ -43,11 +41,13 @@ public class CableDrag : MonoBehaviour
                 isDragging = true;
                 offset = transform.position - worldPos;
 
-                    if (currentArea != null)
+                    if (CurrentArea != null)
                     {
-                        currentArea.IsOccupied = false;
-                        currentArea = null;
+                        CurrentArea.IsOccupied = false;
+                        CurrentArea = null;
                     }
+
+                CableEventManager.TriggerUpdatePowerStatus();
             }
         }
 
@@ -101,7 +101,7 @@ public class CableDrag : MonoBehaviour
         {
             transform.localPosition = bestArea.GetAreaCenterPosition();
             bestArea.IsOccupied = true; 
-            currentArea = bestArea;
+            CurrentArea = bestArea;
         }
     
         CableEventManager.TriggerUpdatePowerStatus();
