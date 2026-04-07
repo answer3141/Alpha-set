@@ -1,24 +1,35 @@
 using UnityEngine;
+using System.Collections;
 
 public class ClearCheck : MonoBehaviour
 {
     // クリア用電球のリスト
-    [SerializeField] private GameObject[] targets;
+    [SerializeField] private GameObject[] targets;//電球のプレハブの子オブジェクトのOff状態単体の電球をアタッチ
     [SerializeField] private GameObject clearPanel;
     [SerializeField] private Transform Canvas;
+
+    private float delayTime = 1f; // クリアパネル表示後の遅延時間
 
     private bool isCleared = false;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && !isCleared)
+        if (isCleared) return; // すでにクリアしている場合はチェックをスキップ
+
+        if (Input.GetKeyDown(KeyCode.Space) && !isCleared)// クリア状態でない場合にのみチェックを行う
         {
            if (CheckAllActive()==true)
            {
-               // クリア処理
-               ShowClearPanel();
+            StartCoroutine(ShowClearPanelWithDelay());
            }
         }
+    }
+
+    private IEnumerator ShowClearPanelWithDelay()
+    {
+        isCleared = true; // クリア状態を設定して重複表示を防止
+        yield return new WaitForSeconds(delayTime);
+        ShowClearPanel();
     }
 
     private bool CheckAllActive()
@@ -29,7 +40,7 @@ public class ClearCheck : MonoBehaviour
         {
             if (obj == null) continue;
 
-            if (!obj.activeSelf)
+            if (obj.activeSelf)
             {
                 return false;
             }
@@ -42,6 +53,8 @@ public class ClearCheck : MonoBehaviour
     {
         if (clearPanel != null && Canvas != null)
         {
+
+
             isCleared = true;
 
             // 【修正ポイント】Instantiate を使って「実体」を作り、同時に親を設定します
