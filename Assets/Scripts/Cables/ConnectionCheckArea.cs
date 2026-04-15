@@ -1,84 +1,54 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
-public class ConnectionCheckArea : MonoBehaviour
+// IConnectionTargetArea と IConnectionTriggerArea
+public class ConnectionCheckArea : ConnectionCheckAreaBase, IConnectionTargetArea, IConnectionTriggerArea
 {
     [SerializeField, Header("このエリアと繋がっているエリアを設定")]
-    private List<ConnectionCheckArea> connectedCableList = new List<ConnectionCheckArea>();
-    
-    [SerializeField, Header("現在繋がっているエリア")]
-    private List<ConnectionCheckArea> currentConnectedCableList = new List<ConnectionCheckArea>();
-    private ICableConnectable parentConnectable;
-    private Collider2D myCollider;
-    private ContactFilter2D contactFilter;
-    private void Awake()
+    private List<MonoBehaviour> connectedCableObjects = new List<MonoBehaviour>();
+    private List<IConnectionTriggerArea> connectedCableList = new List<IConnectionTriggerArea>();
+
+    protected override void Awake()
     {
-        myCollider = GetComponent<Collider2D>();
-        contactFilter = new ContactFilter2D();
-        contactFilter.useTriggers = true;
-
-        if (!transform.parent.TryGetComponent(out parentConnectable ))
-        {
-            Debug.LogError($"{transform.parent.name}にICableConnectableを実装したコンポーネントが必要です。");
-        }
-    }
-
-    private void OnEnable() 
-    {
-        CableEventManager.OnResetPowerStatus += UpdateColliderStatus;
-    }
-    private void OnDisable() {
-        CableEventManager.OnResetPowerStatus -= UpdateColliderStatus;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.TryGetComponent(out ConnectionCheckArea connectionCheckArea))
-        {
-            currentConnectedCableList.Add(connectionCheckArea);
-        }
-    }
-    private void OnTriggerExit2D(Collider2D other) {
-        if (other.gameObject.TryGetComponent(out ConnectionCheckArea connectionCheckArea))
-        {
-            currentConnectedCableList.Remove(connectionCheckArea);
-        }
+        base.Awake();
+        connectedCableList = connectedCableObjects
+            .Where(obj => obj != null)
+            .OfType<IConnectionTriggerArea>()
+            .ToList();
     }
 
     // 通電するときに外から呼び出される関数
     public void Connected(float currentPower)
     {
+        Debug.Log("called Connected in ConnectionCheckArea");
         if(connectedCableList.Count <= 0) return;
-        parentConnectable.ConnectCable(connectedCableList, currentPower);
+        base.parentConnectable.ConnectCable(connectedCableList, currentPower);
     }
     //　接続されているエリアにさらに繋がっているエリアがあれば、そこも通電させるための関数
     public void CheckConnections(float newPower)
     {
         
-        if(currentConnectedCableList.Count <= 0) return;
-        foreach (ConnectionCheckArea connectedCable in currentConnectedCableList)
+        if(base.currentConnectionTargetArea.Count <= 0) return;
+        foreach (IConnectionTargetArea connectedCable in base.currentConnectionTargetArea)
         {
             connectedCable.Connected(newPower);
         }
     }
 
-// ドラッグ後はOnTriggerEnter2DやOnTriggerExit2Dが呼び出される前に処理したいので、OverlapColliderで強制的に接触状態を更新
-    public void UpdateColliderStatus()
+#if UNITY_EDITOR
+    private void OnValidate() 
     {
-        currentConnectedCableList.Clear();
-
-        Physics2D.SyncTransforms();
-        List<Collider2D> results = new List<Collider2D>();
-        int colliderCount = Physics2D.OverlapCollider(myCollider, contactFilter, results);
-
-        if (colliderCount <= 0) return;
-
-        foreach (var collider in results)
+        for (int i = 0; i < connectedCableObjects.Count; i++)
         {
-            if (collider.gameObject.TryGetComponent(out ConnectionCheckArea connectionCheckArea))
+            MonoBehaviour obj = connectedCableObjects[i];
+            if (obj != null && !(obj is IConnectionTargetArea))
             {
-                currentConnectedCableList.Add(connectionCheckArea);
+                Debug.LogWarning($"connectedCableObjectsの要素にはIConnectionTargetAreaを実装したコンポーネントをアタッチしてください。{obj.name}は無効化されます。");
+                connectedCableObjects[i] = null;
             }
         }
     }
+#endif
 
 }

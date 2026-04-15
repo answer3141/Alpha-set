@@ -1,10 +1,10 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class PowerSupply : MonoBehaviour, ICableConnectable
+public class PowerSupply : MonoBehaviour
 {
     [SerializeField]
-    private List<ConnectionCheckArea> connectedCableList = new List<ConnectionCheckArea>();
+    private List<IConnectionTargetArea> connectedCableList = new List<IConnectionTargetArea>();
     // この電源から出る電力の量
     [SerializeField]
     private float powerOutput = 5f;
@@ -29,7 +29,7 @@ public class PowerSupply : MonoBehaviour, ICableConnectable
     }
     private void OnTriggerEnter2D(Collider2D other) {
         GameObject otherObj = other.gameObject;
-        if (otherObj.TryGetComponent(out ConnectionCheckArea connectionCheckArea))
+        if (otherObj.TryGetComponent(out IConnectionTargetArea connectionCheckArea))
         {
             connectedCableList.Add(connectionCheckArea);
         }
@@ -37,18 +37,19 @@ public class PowerSupply : MonoBehaviour, ICableConnectable
     }
     private void OnTriggerExit2D(Collider2D other) {
         GameObject otherObj = other.gameObject;
-        if (otherObj.TryGetComponent(out ConnectionCheckArea connectionCheckArea))
+        if (otherObj.TryGetComponent(out IConnectionTargetArea connectionCheckArea))
         {
             connectedCableList.Remove(connectionCheckArea);
         }
     }
-    public void ConnectCable(List<ConnectionCheckArea> targetCableList, float currentPower)
+    public void PowerOn(List<IConnectionTargetArea> targetCableList, float currentPower)
     {
         
         mySpriteRenderer.color = Color.yellow;
-        foreach (ConnectionCheckArea targetCable in targetCableList)
+        foreach (IConnectionTargetArea targetCable in targetCableList)
         {
             targetCable.Connected(currentPower);
+            Debug.Log("PowerSupply is powering on!");
         }
     }
     public void InitializePower()
@@ -64,7 +65,7 @@ public class PowerSupply : MonoBehaviour, ICableConnectable
     {
         if (isPowerOn)
         {
-            ConnectCable(connectedCableList, powerOutput);
+            PowerOn(connectedCableList, powerOutput);
         }
     }
     private void Update() {

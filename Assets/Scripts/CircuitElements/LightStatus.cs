@@ -1,38 +1,45 @@
 using UnityEngine;
+using System.Collections.Generic;
 
-public class LightStatus : MonoBehaviour
+public class LightStatus : MonoBehaviour, ICableConnectable
 {
     //状態参照する(隣の)ケーブルの子オブジェクトの通電状態を示す黄色いオブジェクトをアタッチ
     [SerializeField] private GameObject StatusObject;
     //電球の子オブジェクトをアタッチ
     [SerializeField] private GameObject OffLight;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     
-    // Update is called once per frame
-    void Update()
+    private void OnEnable() 
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StatusControl();
-        }
+        CableEventManager.OnInitializePowerStatus += InitializePower;
+        CableEventManager.OnResetPowerStatus += ResetPowerStatus;
     }
-
-
-    public void StatusControl()
+    private void OnDisable() 
     {
-        if (StatusObject != null && OffLight != null)
-        {
+        CableEventManager.OnInitializePowerStatus -= InitializePower;
+        CableEventManager.OnResetPowerStatus -= ResetPowerStatus;
+    }
+    
+    public void ConnectCable(List<IConnectionTriggerArea> targetCableList, float currentPower)
+    {
+        Debug.Log("called ConnectCable");
+
+        if (currentPower <= 0) return;
         
-            if (StatusObject.activeSelf == false)
-            {
-                OffLight.SetActive(true);
-            }
-            else
-            {
-                OffLight.SetActive(false);
-            }
-        }
+        Debug.Log("LightStatus is powered on!");
+        OffLight.SetActive(false);
     }
+
+    public void InitializePower()
+    {
+        OffLight.SetActive(true);
+    }
+
+    public void ResetPowerStatus()
+    {
+        OffLight.SetActive(true);
+    }
+
 }
 
 

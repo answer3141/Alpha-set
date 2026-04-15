@@ -29,13 +29,15 @@ public class NormalCable : MonoBehaviour, ICableConnectable
         powerStatus.SetActive(false);
     }
 
-    public void ConnectCable(List<ConnectionCheckArea> targetCableList, float previousPower)
+    public void ConnectCable(List<IConnectionTriggerArea> targetCableList, float previousPower)
     {
+        Debug.Log("called ConnectCable in NormalCable");
         if (previousPower <= 0 || previousPower < powerLossAmount) return;
+        Debug.Log("NormalCable is connecting!");
         powerStatus.SetActive(true);
 
         currentPower = previousPower;
-        foreach (ConnectionCheckArea targetCable in targetCableList)
+        foreach (IConnectionTriggerArea targetCable in targetCableList)
         {
             targetCable.CheckConnections(currentPower - powerLossAmount);
         }

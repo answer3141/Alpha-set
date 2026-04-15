@@ -36,13 +36,13 @@ public class AlphabetCable : MonoBehaviour, ICableConnectable
         }
     }
 
-    public void ConnectCable(List<ConnectionCheckArea> targetCableList, float currentPower)
+    public void ConnectCable(List<IConnectionTriggerArea> targetCableList, float currentPower)
     {
         if (currentPower <= 0) return;
         // 未設置の際には通電させない
         if (cableDrag.CurrentArea == null) return;
         powerStatus.SetActive(true);
-        foreach (ConnectionCheckArea targetCable in targetCableList)
+        foreach (IConnectionTriggerArea targetCable in targetCableList)
         {
             targetCable.CheckConnections(currentPower - powerLossAmount);
         }
