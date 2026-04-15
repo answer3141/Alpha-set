@@ -7,6 +7,8 @@ public static class CableEventManager
     // 電力をいったんOFFにし、再度接続判定する
     public static event Action OnResetPowerStatus;
     public static event Action OnUpdatePowerStatus;
+    public static event Action OnUpdateElementStatus;
+    public static event Action OnCheckClearCondition;
     public static void TriggerInitializePowerStatus()
     {
         OnInitializePowerStatus?.Invoke();
@@ -15,5 +17,11 @@ public static class CableEventManager
     {
         OnResetPowerStatus?.Invoke();
         OnUpdatePowerStatus?.Invoke();
+        OnUpdateElementStatus?.Invoke();
+        OnCheckClearCondition?.Invoke();
+    }
+    public static void TriggerCheckClearCondition()
+    {
+        OnCheckClearCondition?.Invoke();
     }
 }

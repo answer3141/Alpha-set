@@ -12,16 +12,30 @@ public class ClearCheck : MonoBehaviour
 
     private bool isCleared = false;
 
-    void Update()
+    private void OnEnable()
+    {
+        CableEventManager.OnInitializePowerStatus += InitializeClearCondition;
+        CableEventManager.OnCheckClearCondition += CheckClearCondition;
+    }
+
+    private void OnDisable()
+    {
+        CableEventManager.OnInitializePowerStatus -= InitializeClearCondition;
+        CableEventManager.OnCheckClearCondition -= CheckClearCondition;
+    }
+
+    private void InitializeClearCondition()
+    {
+        isCleared = false;
+    }
+
+    private void CheckClearCondition()
     {
         if (isCleared) return; // すでにクリアしている場合はチェックをスキップ
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isCleared)// クリア状態でない場合にのみチェックを行う
+        if (CheckAllActive()==true)
         {
-           if (CheckAllActive()==true)
-           {
             StartCoroutine(ShowClearPanelWithDelay());
-           }
         }
     }
 
@@ -70,6 +84,3 @@ public class ClearCheck : MonoBehaviour
         }
     }
 }
-
-
-   
