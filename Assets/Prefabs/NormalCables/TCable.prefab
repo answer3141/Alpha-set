@@ -662,6 +662,18 @@ PrefabInstance:
       propertyPath: 'connectedCableList.Array.data[1]'
       value: 
       objectReference: {fileID: 5619085170119139377}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: connectedCableObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: 'connectedCableObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4884752929999910797}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: 'connectedCableObjects.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5619085170119139377}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -747,6 +759,18 @@ PrefabInstance:
       propertyPath: 'connectedCableList.Array.data[1]'
       value: 
       objectReference: {fileID: 4884752929999910797}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: connectedCableObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: 'connectedCableObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 6792449724819055426}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: 'connectedCableObjects.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4884752929999910797}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -830,6 +854,18 @@ PrefabInstance:
       objectReference: {fileID: 6792449724819055426}
     - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: 'connectedCableList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5619085170119139377}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: connectedCableObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: 'connectedCableObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 6792449724819055426}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: 'connectedCableObjects.Array.data[1]'
       value: 
       objectReference: {fileID: 5619085170119139377}
     m_RemovedComponents: []

@@ -457,6 +457,14 @@ PrefabInstance:
       propertyPath: 'connectedCableList.Array.data[2]'
       value: 
       objectReference: {fileID: 5132400500035054877}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: connectedCableObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: 'connectedCableObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2848504843603060897}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -546,6 +554,14 @@ PrefabInstance:
       propertyPath: 'connectedCableList.Array.data[2]'
       value: 
       objectReference: {fileID: 2848504843603060897}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: connectedCableObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: 'connectedCableObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1738131800702456231}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -695,6 +711,14 @@ PrefabInstance:
       objectReference: {fileID: 2848504843603060897}
     - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: 'connectedCableList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5132400500035054877}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: connectedCableObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: 'connectedCableObjects.Array.data[0]'
       value: 
       objectReference: {fileID: 5132400500035054877}
     m_RemovedComponents: []
@@ -848,6 +872,14 @@ PrefabInstance:
       propertyPath: 'connectedCableList.Array.data[2]'
       value: 
       objectReference: {fileID: 5132400500035054877}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: connectedCableObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
+      propertyPath: 'connectedCableObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5196264724950933389}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
