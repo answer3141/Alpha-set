@@ -31,9 +31,7 @@ public class NormalCable : MonoBehaviour, ICableConnectable
 
     public void ConnectCable(List<IConnectionTriggerArea> targetCableList, float previousPower)
     {
-        Debug.Log("called ConnectCable in NormalCable");
         if (previousPower <= 0 || previousPower < powerLossAmount) return;
-        Debug.Log("NormalCable is connecting!");
         powerStatus.SetActive(true);
 
         currentPower = previousPower;

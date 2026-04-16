@@ -49,7 +49,6 @@ public class PowerSupply : MonoBehaviour
         foreach (IConnectionTargetArea targetCable in targetCableList)
         {
             targetCable.Connected(currentPower);
-            Debug.Log("PowerSupply is powering on!");
         }
     }
     public void InitializePower()
