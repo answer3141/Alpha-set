@@ -709,6 +709,7 @@ GameObject:
   - component: {fileID: 8588694470076993023}
   - component: {fileID: 8845184641759676209}
   - component: {fileID: 2232693543945357863}
+  - component: {fileID: 1961730115817885590}
   m_Layer: 8
   m_Name: AlphabetTyping
   m_TagString: Untagged
@@ -854,6 +855,19 @@ SortingGroup:
   m_SortingOrder: 0
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
+--- !u!114 &1961730115817885590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6617958820210337007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb60fde1fc0c324a8a9f589133e311b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TypingAnimation
+  text: {fileID: 923707544327778696}
 --- !u!1 &8665590220322205244
 GameObject:
   m_ObjectHideFlags: 0

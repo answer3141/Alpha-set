@@ -1,16 +1,17 @@
 using UnityEngine;
+using DG.Tweening; // DOTweenを使用するための名前空間
+using TMPro;
 
 public class TypingAnimation : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private TMPro.TMP_Text text;
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        text.alpha = 1;
+        text.DOFade(0f, 1f)
+            .SetEase(Ease.InOutCubic)
+            .SetLoops(-1, LoopType.Yoyo);
     }
 }
