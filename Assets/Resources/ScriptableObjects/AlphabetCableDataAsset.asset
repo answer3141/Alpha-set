@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43d1671553fe7c748af38c775f1aa672, type: 3}
   m_Name: AlphabetCableDataAsset
   m_EditorClassIdentifier: Assembly-CSharp::AlphabetCableDataAsset
-  alphabetCableDataList: []
+  alphabetCableDataList:
+  - character: 65
+    prefab: {fileID: 984816670087916226, guid: 66f8520310b0fe641aa24bc2479d70c7, type: 3}
+  - character: 66
+    prefab: {fileID: 3365527069516333258, guid: d9e97d53dc0f2944799902fe69ed98a2, type: 3}
+  - character: 84
+    prefab: {fileID: 2108261534957849511, guid: 1664b9fc3862fdd4a9de32e3adaf896f, type: 3}
