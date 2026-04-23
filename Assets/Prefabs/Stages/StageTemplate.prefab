@@ -398,9 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c8c6ece77d8cd44b7e39506c352937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetPosition
-  targetObjects:
-  - {fileID: 0}
-  - {fileID: 0}
+  targetObjectParent: {fileID: 8322879015496098076}
 --- !u!1 &8259025342788898852
 GameObject:
   m_ObjectHideFlags: 0
