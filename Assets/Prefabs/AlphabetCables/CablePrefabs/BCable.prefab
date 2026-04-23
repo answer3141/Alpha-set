@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 998781502578979487}
   - component: {fileID: 3923926563216444196}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 795508892358248839}
   - component: {fileID: 5380945705839325050}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,10 +193,9 @@ GameObject:
   - component: {fileID: 1920653466449669460}
   - component: {fileID: 6660474613616305352}
   - component: {fileID: 8276262433520632727}
-  - component: {fileID: 6610734290270165332}
   - component: {fileID: 9221901544410957323}
   - component: {fileID: 7455247595779407667}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BCable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,22 +307,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
---- !u!114 &6610734290270165332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3365527069516333258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32c404a685f7944694bc142f869b76f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CableDrag
-  isDragging: 0
-  AlphabetLayerMask:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!114 &9221901544410957323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,7 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2857948486302921659}
   - component: {fileID: 4854584823307831651}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cover (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,7 +436,7 @@ GameObject:
   - component: {fileID: 5027657359629113039}
   - component: {fileID: 6778402044365022626}
   - component: {fileID: 332118445974905221}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,7 +572,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9184245903441372881}
   - component: {fileID: 1982598980544126665}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cover (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7036104717962632477}
   - component: {fileID: 7343726040675820298}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: power
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -773,7 +756,7 @@ GameObject:
   - component: {fileID: 6500987745415496622}
   - component: {fileID: 2238911090530868710}
   - component: {fileID: 5893573889868259934}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -874,7 +857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5644983271343068632}
   - component: {fileID: 5388642497326493015}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cover (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1005,7 +988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147869506730917461, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096510041276469500, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Color.b
@@ -1025,7 +1008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840353397310855667, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Name
@@ -1033,11 +1016,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226836322817199178, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1124,7 +1107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1563661780678263496, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: connectedCableList.Array.size
@@ -1221,7 +1204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147869506730917461, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096510041276469500, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_SortingOrder
@@ -1229,7 +1212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840353397310855667, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Name
@@ -1237,11 +1220,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226836322817199178, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1328,7 +1311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1563661780678263496, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: connectedCableList.Array.size
@@ -1429,7 +1412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1563661780678263496, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: connectedCableList.Array.size
@@ -1526,7 +1509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147869506730917461, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096510041276469500, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Color.b
@@ -1546,7 +1529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840353397310855667, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Name
@@ -1554,11 +1537,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226836322817199178, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1645,7 +1628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1563661780678263496, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: connectedCableList.Array.size
@@ -1746,7 +1729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1563661780678263496, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: connectedCableList.Array.size
@@ -1839,7 +1822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147869506730917461, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096510041276469500, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_SortingOrder
@@ -1847,7 +1830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840353397310855667, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Name
@@ -1855,11 +1838,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226836322817199178, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1942,7 +1925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147869506730917461, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096510041276469500, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Color.b
@@ -1962,7 +1945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840353397310855667, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Name
@@ -1970,11 +1953,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226836322817199178, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

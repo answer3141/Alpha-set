@@ -34,5 +34,8 @@ public class AlphabetChanger : MonoBehaviour
         }
         GameObject alphabetCable = Instantiate(alphabetCableDictionary[targetChar], targetGameObject.transform.position, Quaternion.identity, targetGameObject.transform);
         alphabetCable.transform.SetParent(targetGameObject.transform);
+
+        CableEventManager.TriggerUpdatePowerStatus();
+        Debug.Log("Alphabet changed to: " + targetChar);
     }
 }

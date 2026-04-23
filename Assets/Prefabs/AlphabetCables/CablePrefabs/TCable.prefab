@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1300245921379430349}
   - component: {fileID: 1807914814233895469}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cover (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4313826935384757601}
   - component: {fileID: 5891082866663176079}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cover (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3348089739364033423}
   - component: {fileID: 4404373233511715417}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,10 +284,9 @@ GameObject:
   - component: {fileID: 6569877173828781238}
   - component: {fileID: 1236726386099640553}
   - component: {fileID: 4891300983445126698}
-  - component: {fileID: 1969836340122895653}
   - component: {fileID: 4478086975740434208}
   - component: {fileID: 5741372285956034577}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: TCable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,22 +394,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
---- !u!114 &1969836340122895653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108261534957849511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32c404a685f7944694bc142f869b76f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CableDrag
-  isDragging: 0
-  AlphabetLayerMask:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!114 &4478086975740434208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,7 +431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359467556448621000}
   - component: {fileID: 4275445584996581673}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: power
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +524,7 @@ GameObject:
   - component: {fileID: 8360465243229806992}
   - component: {fileID: 8650028263751106017}
   - component: {fileID: 220512998565163127}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +626,7 @@ GameObject:
   - component: {fileID: 3990056834496159640}
   - component: {fileID: 8301106724171512476}
   - component: {fileID: 7742227536119678853}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,7 +764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1009881667970810779}
   - component: {fileID: 8782239347961766440}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3135325352105596539}
   - component: {fileID: 1376512623159302851}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cover (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1007,7 +990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1563661780678263496, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: connectedCableList.Array.size
@@ -1108,7 +1091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1563661780678263496, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: connectedCableList.Array.size
@@ -1205,7 +1188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147869506730917461, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096510041276469500, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_SortingOrder
@@ -1213,7 +1196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840353397310855667, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Name
@@ -1221,11 +1204,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226836322817199178, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1308,7 +1291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147869506730917461, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096510041276469500, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_SortingOrder
@@ -1316,7 +1299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840353397310855667, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Name
@@ -1324,11 +1307,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226836322817199178, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1415,7 +1398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1563661780678263496, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6850871877699230187, guid: 004a738e38a876e4ba97ed24faee483a, type: 3}
       propertyPath: connectedCableList.Array.size
@@ -1512,7 +1495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147869506730917461, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096510041276469500, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_SortingOrder
@@ -1520,7 +1503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6840353397310855667, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Name
@@ -1528,11 +1511,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7462788765929113260, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226836322817199178, guid: 8ba766c96dce046469897959511ad061, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6748962781089342387}
   - component: {fileID: 7314093682988965774}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1397328938642937486}
   - component: {fileID: 462216339281982448}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: power
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5810482040944256872}
   - component: {fileID: 4939312972251139634}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cover (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 7483072654164034492}
   - component: {fileID: 4052293834117025907}
   - component: {fileID: 201867425182396508}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 2562721791740226386}
   - component: {fileID: 2217942509075464388}
   - component: {fileID: 8585597051736632695}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DefaultCable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8810533702501085020}
   - component: {fileID: 4113265830318241035}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cover (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 1183251427545084894}
   - component: {fileID: 17227489686150088}
   - component: {fileID: 5602442427084572510}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -756,7 +756,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2202006106180007059}
   - component: {fileID: 2267292698441517556}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cover (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -847,7 +847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9072602380812595381}
   - component: {fileID: 4020689975429312860}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
