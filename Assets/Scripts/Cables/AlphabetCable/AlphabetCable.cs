@@ -28,7 +28,6 @@ public class AlphabetCable : MonoBehaviour, ICableConnectable
         powerStatus.SetActive(false);
         if (transform.parent.TryGetComponent(out CableDrag drag))
         {
-            Debug.Log($"CableDrag found in parent: {transform.parent.name}");
             cableDrag = drag;
         }
         else
@@ -39,7 +38,6 @@ public class AlphabetCable : MonoBehaviour, ICableConnectable
 
     public void ConnectCable(List<IConnectionTriggerArea> targetCableList, float currentPower)
     {
-        Debug.Log($"Connecting cable with current power: {currentPower}");
         if (currentPower <= 0) return;
         // 未設置の際には通電させない
         if (cableDrag.CurrentArea == null) return;

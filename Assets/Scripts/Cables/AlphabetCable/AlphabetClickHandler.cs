@@ -7,6 +7,7 @@ public class AlphabetClickHandler : MonoBehaviour, IPointerDownHandler, IPointer
 {
     [SerializeField]
     private AlphabetInputHandler alphabetInputHandler;
+    private LayerMask alphabetCableLayer; 
     // オブジェクトが破棄されたときに非同期処理を止めるためのトークン
     private CancellationToken cancellationToken;
     private bool isPointerDown = false;
@@ -16,12 +17,12 @@ public class AlphabetClickHandler : MonoBehaviour, IPointerDownHandler, IPointer
     void Start()
     {
         cancellationToken = this.GetCancellationTokenOnDestroy();
+        alphabetCableLayer = LayerMask.GetMask("Alphabet"); 
     }
 
     // Event Systemが提供する、オブジェクトがクリックされたときに呼び出されるメソッド
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log($"Pointer Down: {eventData.pointerCurrentRaycast.gameObject.name}");
         isPointerDown = true;
         // .Forget()で非同期処理を読んでも動作を止めずに実行する
         CheckClickOrDragAsync(cancellationToken).Forget();
