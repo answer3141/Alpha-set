@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AlphabetCableDataAsset
   alphabetCableDataList:
   - character: 65
-    prefab: {fileID: 984816670087916226, guid: 66f8520310b0fe641aa24bc2479d70c7, type: 3}
+    prefab: {fileID: 8987926663025826940, guid: 66f8520310b0fe641aa24bc2479d70c7, type: 3}
   - character: 66
     prefab: {fileID: 3365527069516333258, guid: d9e97d53dc0f2944799902fe69ed98a2, type: 3}
   - character: 84

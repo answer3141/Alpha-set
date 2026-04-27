@@ -478,7 +478,6 @@ GameObject:
   - component: {fileID: 1989310165059587238}
   - component: {fileID: 5382755384862828736}
   - component: {fileID: -5891654931531608150}
-  - component: {fileID: 1516378613290850337}
   - component: {fileID: 1991824605754973987}
   - component: {fileID: 3426915571218592549}
   m_Layer: 0
@@ -497,7 +496,7 @@ Transform:
   m_GameObject: {fileID: 7462788765929113260}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.40537, y: 1.07591, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -589,22 +588,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
---- !u!114 &1516378613290850337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7462788765929113260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32c404a685f7944694bc142f869b76f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CableDrag
-  isDragging: 0
-  AlphabetLayerMask:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!114 &1991824605754973987
 MonoBehaviour:
   m_ObjectHideFlags: 0
