@@ -398,9 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c8c6ece77d8cd44b7e39506c352937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetPosition
-  targetObjects:
-  - {fileID: 0}
-  - {fileID: 0}
+  targetObjectParent: {fileID: 8322879015496098076}
 --- !u!1 &8259025342788898852
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,7 +458,7 @@ GameObject:
   - component: {fileID: 7103251120667256194}
   - component: {fileID: 3421663280548560770}
   m_Layer: 0
-  m_Name: AlphabetCable
+  m_Name: AlphabetCables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

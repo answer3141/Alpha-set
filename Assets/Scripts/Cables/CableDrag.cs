@@ -99,7 +99,7 @@ public class CableDrag : MonoBehaviour
 
         if (bestArea != null)
         {
-            transform.localPosition = bestArea.GetAreaCenterPosition();
+            transform.localPosition = new Vector3(bestArea.GetAreaCenterPosition().x, bestArea.GetAreaCenterPosition().y, transform.localPosition.z);
             bestArea.IsOccupied = true; 
             CurrentArea = bestArea;
         }

@@ -22,11 +22,9 @@ public class LightStatus : MonoBehaviour, ICableConnectable
     
     public void ConnectCable(List<IConnectionTriggerArea> targetCableList, float currentPower)
     {
-        Debug.Log("called ConnectCable");
 
         if (currentPower <= 0) return;
         
-        Debug.Log("LightStatus is powered on!");
         OffLight.SetActive(false);
     }
 

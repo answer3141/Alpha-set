@@ -3,7 +3,9 @@ using System.Collections.Generic;
 
 public class ResetPosition : MonoBehaviour
 {
-    [SerializeField] private GameObject[] targetObjects;
+    [SerializeField]
+    private GameObject targetObjectParent;
+    private List<GameObject> targetObjects = new List<GameObject>();
 
     private struct ObjectData
     {
@@ -16,8 +18,12 @@ public class ResetPosition : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        foreach (GameObject obj in targetObjects)
+        targetObjects.Clear();
+        originalData.Clear();
+        foreach (Transform child in targetObjectParent.transform)
         {
+            GameObject obj = child.gameObject;
+            targetObjects.Add(obj);
             if (obj != null)
             {
                 originalData.Add(new ObjectData
@@ -36,7 +42,7 @@ public class ResetPosition : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            for (int i = 0; i < targetObjects.Length; i++)
+            for (int i = 0; i < targetObjects.Count; i++)
             {
                 if (targetObjects[i] != null)
                 {

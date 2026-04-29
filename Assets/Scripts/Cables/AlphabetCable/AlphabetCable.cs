@@ -23,16 +23,16 @@ public class AlphabetCable : MonoBehaviour, ICableConnectable
         CableEventManager.OnResetPowerStatus -= ResetPowerStatus;
 
     }
-    void Start()
+    void Awake()
     {
         powerStatus.SetActive(false);
-        if (TryGetComponent(out CableDrag drag))
+        if (transform.parent.TryGetComponent(out CableDrag drag))
         {
             cableDrag = drag;
         }
         else
         {
-            Debug.LogError($"CableDrag が {gameObject.name} に見つかりません");
+            Debug.LogError($"CableDrag が {transform.parent.name} に見つかりません");
         }
     }
 

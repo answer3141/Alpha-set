@@ -21,7 +21,6 @@ public class ConnectionCheckArea : ConnectionCheckAreaBase, IConnectionTargetAre
     // 通電するときに外から呼び出される関数
     public void Connected(float currentPower)
     {
-        Debug.Log("called Connected in ConnectionCheckArea");
         if(connectedCableList.Count <= 0) return;
         base.parentConnectable.ConnectCable(connectedCableList, currentPower);
     }
