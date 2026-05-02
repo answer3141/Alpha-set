@@ -40,5 +40,6 @@ Builds
 *.apk
 *.unitypackage
 
-/[Aa]ssets/FreeAssets/
-/[Aa]ssets/FreeAssets.meta
+/Assets/FreeAssets/**/*
+!/Assets/FreeAssets/**/
+!/Assets/FreeAssets/**/*.meta

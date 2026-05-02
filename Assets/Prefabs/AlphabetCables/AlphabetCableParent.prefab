@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8965642814635673023}
   - component: {fileID: 3560784424678142109}
   m_Layer: 8
-  m_Name: AlphabetCablePearent
+  m_Name: AlphabetCableParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
