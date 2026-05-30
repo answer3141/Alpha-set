@@ -2484,6 +2484,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9932495}
     m_Modifications:
+    - target: {fileID: 1645387233444827132, guid: f4a7fb1d208bce34f919d82e5a44c677, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -623095429721900143, guid: 80516955068d9e744ac1eb89a1ef9a3f, type: 2}
     - target: {fileID: 1889858835311989003, guid: f4a7fb1d208bce34f919d82e5a44c677, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2853,6 +2857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TCable
       objectReference: {fileID: 0}
+    - target: {fileID: 7163529071143500035, guid: 1664b9fc3862fdd4a9de32e3adaf896f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -623095429721900143, guid: 80516955068d9e744ac1eb89a1ef9a3f, type: 2}
     - target: {fileID: 8036183006335444980, guid: 1664b9fc3862fdd4a9de32e3adaf896f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2993,6 +3001,10 @@ PrefabInstance:
     - target: {fileID: 7155464591856998866, guid: 09c3b845d850655459abf15f429a62e4, type: 3}
       propertyPath: 'targetObjects.Array.data[1]'
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930495160367843632, guid: 09c3b845d850655459abf15f429a62e4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8940843995625686949, guid: 09c3b845d850655459abf15f429a62e4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3224,6 +3236,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1873936196127648973, guid: d9e97d53dc0f2944799902fe69ed98a2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -623095429721900143, guid: 80516955068d9e744ac1eb89a1ef9a3f, type: 2}
     - target: {fileID: 7702400778135255088, guid: d9e97d53dc0f2944799902fe69ed98a2, type: 3}
       propertyPath: m_Name
       value: BCable
