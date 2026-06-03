@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ButtonManager : MonoBehaviour
 {
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void StageSelect()
     {
@@ -22,6 +23,11 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene("TitleScene");
     }
+    public void nextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     public void Stage1()
     {
         SceneManager.LoadScene("Stage1");
